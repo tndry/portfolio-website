@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.navbar-fixed {
+  @apply fixed z-[9999] bg-white bg-opacity-70 backdrop-blur-sm;
+  box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.2);
+}
+
+.hamburger-line {
+  @apply w-[30px] h-[2px] my-2 block bg-dark;
+}
+
+.hamburger-active > span:nth-child(1) {
+  @apply rotate-45;
+}
+.hamburger-active > span:nth-child(3) {
+  @apply -rotate-45;
+}
+.hamburger-active > span:nth-child(2) {
+  @apply scale-0;
+}
+
+/* src/output.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Dark mode styles */
+.dark {
+  --tw-bg-opacity: 1;
+  background-color: rgba(26, 32, 44, var(--tw-bg-opacity)); /* Dark background */
+  --tw-text-opacity: 1;
+  color: rgba(160, 174, 192, var(--tw-text-opacity)); /* Dark text color */
+}
+
+.dark .bg-background {
+  background-color: rgba(26, 32, 44, var(--tw-bg-opacity)); /* Dark background */
+}
+
+.dark .text-primary {
+  color: rgba(99, 179, 237, var(--tw-text-opacity)); /* Dark primary text color */
+}
+
+.dark .text-dark {
+  color: rgba(160, 174, 192, var(--tw-text-opacity)); /* Dark text color */
+}
+
+.dark .bg-portfolio {
+  background-color: rgba(26, 32, 44, var(--tw-bg-opacity)); /* Dark portfolio background */
+}
+
+.dark .text-white {
+  color: rgba(255, 255, 255, var(--tw-text-opacity)); /* White text for dark mode */
+}
